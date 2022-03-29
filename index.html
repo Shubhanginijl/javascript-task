@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title> SELECT Dropdown with JSON</title>
+</head>
+<body>
+    <p>
+        <input type="button" 
+            onclick="populateSelect()" 
+                value="JSON" />
+    </p>
+
+    <!--The SELECT element.-->
+    <select id="sel" onchange="show(this)">
+        <option value="">-- Select --</option>
+    </select>
+</br>
+    <button style="background: blue; margin-top: 20px; width: 100px; height: 50px;">Load</button>
+
+    <p id="msg"></p>
+</body>
+
+<script>
+    function populateSelect() {
+        // THE JSON ARRAY.
+        var city = [
+	"AMERICANCHAMPION",
+	"AMERICANISLANDER",
+	"AMERICANSPIRIT",
+	"ASOG",
+	"BETTYRGAMBARELLA",
+	"ELSBETH3",
+	"GOMSCHIEF",
+	"GOMSTREE",
+	"GONAVIGATOR",
+	"GOPURSUIT",
+	"GOQUEST",
+	"GOSEARCHER",
+	"HAWK",
+	"HOLLYWOOD",
+	"JRTI-1",
+	"JRTI-2",
+	"KELLYC",
+	"NRCQUEST",
+	"OCISLY",
+	"PACIFICFREEDOM",
+	"PACIFICWARRIOR",
+	"RACHEL"
+]
+
+        var ele = document.getElementById('sel');
+        for (var i = 0; i < city.length; i++) {
+            // POPULATE SELECT ELEMENT WITH JSON.
+            city.map((x)=>{
+                sel.innerHTML+=`
+                <option value="">${x}</option>
+
+                
+                `
+            })
+            
+        }
+    }
+    populateSelect()
+
+</script>
+</html>
