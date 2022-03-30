@@ -1,66 +1,32 @@
-<html>
-<head>
-    <title> SELECT Dropdown with JSON</title>
-</head>
-<body>
-    <p>
-        <input type="button" 
-            onclick="populateSelect()" 
-                value="JSON" />
-    </p>
-
-    <!--The SELECT element.-->
-    <select id="sel" onchange="show(this)">
-        <option value="">-- Select --</option>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- <p>
+      <input
+        type="button"
+        style="margin: 10px 0"
+        onclick="fetchData()"
+        value="Click to Populate SELECT with JSON"
+      />
+    </p> -->
+     <div id="center">
+    <select id="template" onchange="show(this)">
+      <option value="">-- Select --</option>
     </select>
-</br>
-    <button style="background: blue; margin-top: 20px; width: 100px; height: 50px;">Load</button>
-
-    <p id="msg"></p>
-</body>
-
-<script>
-    function populateSelect() {
-        // THE JSON ARRAY.
-        var city = [
-	"AMERICANCHAMPION",
-	"AMERICANISLANDER",
-	"AMERICANSPIRIT",
-	"ASOG",
-	"BETTYRGAMBARELLA",
-	"ELSBETH3",
-	"GOMSCHIEF",
-	"GOMSTREE",
-	"GONAVIGATOR",
-	"GOPURSUIT",
-	"GOQUEST",
-	"GOSEARCHER",
-	"HAWK",
-	"HOLLYWOOD",
-	"JRTI-1",
-	"JRTI-2",
-	"KELLYC",
-	"NRCQUEST",
-	"OCISLY",
-	"PACIFICFREEDOM",
-	"PACIFICWARRIOR",
-	"RACHEL"
-]
-
-        var ele = document.getElementById('sel');
-        for (var i = 0; i < city.length; i++) {
-            // POPULATE SELECT ELEMENT WITH JSON.
-            city.map((x)=>{
-                sel.innerHTML+=`
-                <option value="">${x}</option>
-
-                
-                `
-            })
-            
-        }
-    }
-    populateSelect()
-
-</script>
+     
+    </div>
+    
+</div>
+    <div id="content">
+   
+</div>
+    <script src="./index.js" defer></script>
+  </body>
 </html>
